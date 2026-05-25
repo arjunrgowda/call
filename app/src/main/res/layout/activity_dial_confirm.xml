@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="#1A1A2E"
+    android:padding="32dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="📞"
+        android:textSize="64sp"
+        android:layout_marginBottom="16dp"/>
+
+    <TextView
+        android:id="@+id/tvFrom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Call requested from Salesforce"
+        android:textColor="#AAAAAA"
+        android:textSize="14sp"
+        android:layout_marginBottom="12dp"/>
+
+    <TextView
+        android:id="@+id/tvNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="+91XXXXXXXXXX"
+        android:textColor="#FFFFFF"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="48dp"/>
+
+    <Button
+        android:id="@+id/btnCall"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:text="📞  Call Now"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#25A244"
+        android:layout_marginBottom="16dp"/>
+
+    <Button
+        android:id="@+id/btnCancel"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:text="Dismiss (30s)"
+        android:textSize="15sp"
+        android:textColor="#CCCCCC"
+        android:backgroundTint="#333355"/>
+
+</LinearLayout>

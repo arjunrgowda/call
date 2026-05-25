@@ -1,0 +1,47 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+}
+
+android {
+    namespace 'com.autocall.app'
+    compileSdk 34
+
+    defaultConfig {
+        applicationId "com.autocall.app"
+        minSdk 29        // Android 10+
+        targetSdk 34
+        versionCode 1
+        versionName "1.0"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions { jvmTarget = '1.8' }
+    buildFeatures { viewBinding true }
+}
+
+dependencies {
+    implementation 'androidx.core:core-ktx:1.13.1'
+    implementation 'androidx.appcompat:appcompat:1.7.0'
+    implementation 'com.google.android.material:material:1.12.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+
+    // Supabase (Kotlin multiplatform)
+    implementation platform('io.github.jan-tennert.supabase:bom:2.4.2')
+    implementation 'io.github.jan-tennert.supabase:realtime-kt'
+    implementation 'io.github.jan-tennert.supabase:postgrest-kt'
+
+    // Ktor engine for Supabase
+    implementation 'io.ktor:ktor-client-okhttp:2.3.11'
+
+    // Coroutines
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.8.1'
+}
